@@ -7,15 +7,21 @@ import {
   IntroductionPageRegisterCard,
   IntroductionPageStoreTypes,
 } from "../components/IntoductionPage";
+import { useNavigate } from "react-router-dom";
 
 const HomePage: FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <Page className="relative flex flex-1 flex-col bg-[#fafbff]">
+    <Page className="page-content relative flex flex-1 flex-col bg-[#fafbff]">
       <div className="relative">
         <Header
           title={
             (
-              <div className="h-[32px] w-[97.25px]">
+              <div
+                className="h-[32px] w-[97.25px]"
+                onClick={() => navigate("/")}
+              >
                 <img src={Logo} alt="" className="size-full object-cover" />
               </div>
             ) as unknown as string

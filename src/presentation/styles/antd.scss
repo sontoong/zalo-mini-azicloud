@@ -1,17 +1,29 @@
 // Upload
 .customSizedUpload {
   .ant-upload {
-    width: 71px !important;
-    height: 71px !important;
+    width: 80px !important;
+    height: 80px !important;
   }
   .ant-upload-list-item-container {
-    width: 71px !important;
-    height: 71px !important;
+    width: 80px !important;
+    height: 80px !important;
+    .ant-upload-list-item {
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
 // Select
-.customSelect {
+.customSelect.ant-select {
+  .ant-select-selector {
+    border: none !important;
+    .ant-select-selection-item {
+      font-weight: 500;
+    }
+  }
   .ant-select-item-option:not(:last-child) {
     border-bottom: 1px solid #f4f6f4;
   }
@@ -27,22 +39,31 @@
 }
 
 // Checkbox
-.custom-checkbox .ant-checkbox-checked .ant-checkbox-inner {
-  background: linear-gradient(
-    90deg,
-    #03380a 0%,
-    #04450d 32%,
-    #065710 65.5%,
-    #076612 100%
-  ) !important;
-  border-color: #065710 !important;
+.custom-checkbox {
+  .ant-checkbox-label {
+    flex: 1 1 0%;
+  }
 }
 
-// Select
-.custom-select.ant-select {
-  .ant-select-selector {
-    .ant-select-selection-item {
-      font-weight: 500;
+// Radio
+.custom-radio {
+  .ant-radio-wrapper {
+    margin-inline-end: 0;
+  }
+  .ant-radio-label {
+    flex: 1 1 0%;
+  }
+
+  .ant-radio-checked {
+    .ant-radio-inner {
+      background-color: white;
+      border-color: #dbdfe3;
+    }
+    .ant-radio-inner:after {
+      background-color: #8ee2ff;
+      width: 10px;
+      height: 10px;
+      transform: translate(3px, 3px);
     }
   }
 }
@@ -50,8 +71,24 @@
 // Tab
 .custom-tabs.ant-tabs {
   .ant-tabs-nav {
-    .ant-tabs-tab {
-      color: #6e876e;
+    .ant-tabs-nav-list {
+      // width: 100%;
+      // justify-content: center;
+      .ant-tabs-tab {
+        // color: #6e7987;
+        // flex: 1 1 0%;
+        // justify-content: center;
+        padding-bottom: 8px;
+        padding-top: 8px;
+      }
+    }
+  }
+  .ant-tabs-content-holder {
+    .ant-tabs-content {
+      height: 100%;
+      .ant-tabs-tabpane {
+        height: 100%;
+      }
     }
   }
 }

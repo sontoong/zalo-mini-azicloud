@@ -16,6 +16,8 @@ import { validateMessages } from "./presentation/constants/validate-messages";
 import IntroductionPage from "./presentation/pages/IntroductionPage";
 import CreateStorePage from "./presentation/pages/CreateStorePage";
 import CreateSuccessPage from "./presentation/pages/CreateSuccessPage";
+import ModulesPage from "./presentation/pages/ModulesPage";
+import ModuleDetailPage from "./presentation/pages/ModuleDetailsPage";
 
 import "dayjs/locale/vi";
 import timezone from "dayjs/plugin/timezone";
@@ -56,6 +58,14 @@ const router = createBrowserRouter(
         {
           path: "/create-success",
           element: <CreateSuccessPage />,
+        },
+        {
+          path: "/modules",
+          element: <ModulesPage />,
+        },
+        {
+          path: "/modules/:moduleId",
+          element: <ModuleDetailPage />,
         },
       ],
     },
