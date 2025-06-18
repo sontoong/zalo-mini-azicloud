@@ -8,7 +8,7 @@ const StoreTypes = () => {
       <div className="text-center text-xl font-semibold text-primary5">
         Dành riêng cho các cửa hàng
       </div>
-      <div className="flex gap-[20px] overflow-auto px-[16px] hide-scrollbar">
+      <div className="flex snap-x scroll-pl-6 gap-[20px] overflow-auto px-[16px] hide-scrollbar">
         {storeTypes.map((item, index) => (
           <StoreTypeItem key={index} image={item.image} title={item.title} />
         ))}
@@ -19,7 +19,7 @@ const StoreTypes = () => {
 
 const StoreTypeItem: FC<TStoreTypeItem> = ({ image, title }) => {
   return (
-    <div className="flex flex-col gap-[5.78px]">
+    <div className="flex snap-start flex-col items-center gap-[5.78px]">
       <div className="size-[57.81px]">
         <img src={image} alt="" className="size-full object-cover" />
       </div>
@@ -42,5 +42,8 @@ const storeTypes = [
   { image: StoreType1, title: "Tiện tóc nam" },
   { image: StoreType2, title: "Tiệm tóc nữ" },
   { image: StoreType2, title: "Tiệm nail" },
+  { image: StoreType2, title: "Thẩm mỹ viện" },
+  { image: StoreType2, title: "Thẩm mỹ viện" },
+  { image: StoreType2, title: "Thẩm mỹ viện" },
   { image: StoreType2, title: "Thẩm mỹ viện" },
 ];

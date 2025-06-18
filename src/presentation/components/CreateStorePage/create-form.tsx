@@ -13,7 +13,7 @@ const CreateForm = () => {
   const navigate = useNavigate();
 
   const handleFormFinish = () => {
-    navigate("/create-success");
+    navigate("/modules");
   };
 
   return (
@@ -43,7 +43,7 @@ const CreateForm = () => {
         <Radio.ButtonGroup
           items={businessFields}
           activeRender={(field) => (
-            <div className="border-primary4 flex h-[68px] items-center justify-start gap-[8px] rounded-[8px] border-[1.5px] bg-surface px-[10px]">
+            <div className="flex h-[68px] items-center justify-start gap-[8px] rounded-[8px] border-[1.5px] border-primary4 bg-surface px-[10px]">
               <div className="size-[28px]">
                 <img
                   src={field?.image}
