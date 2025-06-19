@@ -15,7 +15,7 @@ const Features = () => {
 const FeatureItem: FC<TFeatureItem> = ({ image, title }) => {
   return (
     <div
-      className="flex w-[160px] shrink-0 snap-start gap-[12px] rounded-[8px] bg-[#fff] px-[10px] py-[12px]"
+      className="flex w-[160px] shrink-0 snap-start items-center gap-[12px] rounded-[8px] bg-[#fff] px-[10px] py-[12px]"
       style={{ boxShadow: "2px 4px 8px 0px #75757529" }}
     >
       <div className="size-[28px] shrink-0">
