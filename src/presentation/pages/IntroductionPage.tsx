@@ -4,6 +4,9 @@ import Logo from "../static/azicloud-logo.png";
 import {
   IntroductionPageBriefInformation,
   IntroductionPageFeatures,
+  IntroductionPageFeaturesBrief,
+  IntroductionPageFooter,
+  IntroductionPageFooterImage,
   IntroductionPageRegisterCard,
   IntroductionPageStoreTypes,
 } from "../components/IntoductionPage";
@@ -32,10 +35,13 @@ const HomePage: FC = () => {
         />
       </div>
       <div className="flex-1 overflow-auto">
-        <div className="flex flex-col py-[20px] pb-[154px]">
+        <div className="flex flex-col py-[20px]">
           <IntroductionPageBriefInformation />
           <IntroductionPageFeatures />
           <IntroductionPageStoreTypes />
+          <IntroductionPageFeaturesBrief />
+          <IntroductionPageFooterImage />
+          <IntroductionPageFooter />
         </div>
         <IntroductionPageRegisterCard />
       </div>
