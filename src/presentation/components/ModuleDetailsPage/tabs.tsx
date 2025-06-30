@@ -1,40 +1,47 @@
-import React from "react";
-import { TabsProps } from "antd";
-import { Tabs as OriginalTabs } from "../common/tabs";
+import React, { FC } from "react";
+import { Anchor } from "antd";
 import { Introduction } from "./intoduction";
+import { Introduction2 } from "./introduction-2";
 
-const Tabs = () => {
-  const tabs: TabsProps["items"] = [
+const Tabs: FC<{ footerOffset: any }> = ({ footerOffset }) => {
+  const items = [
     {
-      key: "1",
-      label: "Giới thiệu",
-      children: <Introduction />,
+      key: "part-1",
+      href: "#part-1",
+      title: <div className="text-base">Giới thiệu</div>,
     },
     {
-      key: "2",
-      label: "Tính năng tiêu biểu",
-      children: (
-        <div className="flex flex-col gap-[20px] px-[16px] py-[12px]"></div>
-      ),
+      key: "part-2",
+      href: "#part-2",
+      title: <div className="text-base">Tính năng tiêu biểu</div>,
     },
   ];
 
   return (
-    <OriginalTabs
-      items={tabs}
-      className="custom-tabs"
-      tabBarStyle={{
-        marginBottom: "17px",
-        background: "white",
-        borderBottom: "none",
-      }}
-      selectColor="#34499D"
-    />
+    <div
+      className="flex flex-col gap-[17px]"
+      style={{ paddingBottom: footerOffset }}
+    >
+      <Anchor
+        items={items}
+        direction="horizontal"
+        getContainer={() =>
+          document.getElementById("moduleDetailsPageTabContainer") ||
+          document.body
+        }
+        replace
+        className="bg-white"
+      />
+      <div className="flex flex-col gap-[17px]">
+        <div id="part-1">
+          <Introduction />
+        </div>
+        <div id="part-2">
+          <Introduction2 />
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Tabs;
-
-type Props = {
-  enableSearch: any;
-};
